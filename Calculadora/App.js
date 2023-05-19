@@ -13,24 +13,24 @@ export default function App() {
 
   function calculator(){
     const splitNumbers = currentNumber.split(' ')
-    const fistNumber = parseFloat(splitNumbers[0]); //Ramificação de correção ortográfica de Aqui fistNumber para firstNumber .Aqui deve conter ;
+    const firstNumber = parseFloat(splitNumbers[0]); //Ramificação de correção ortográfica de Aqui fistNumber para firstNumber .Aqui deve conter ;
     const lastNumber = parseFloat(splitNumbers[2]);//Ramificação para forma certa mudar para : const secondNumber = parseFloat(splitNumbers[2]); Aqui deve conter ;
     const operator = splitNumbers[1];// Aqui deve conter ;
 
     // Faz ação referente tecla pressionada
     switch(operator){
       case '+':
-        setCurrentNumber((fistNumber + lastNumber).toString())//Corrigir escrita para firstNumber .Aqui precisa do comando break 
+        setCurrentNumber((firstNumber + lastNumber).toString())//Corrigir escrita para firstNumber .Aqui precisa do comando break 
         return
       case '-': 
-     setCurrentNumber((fistNumber - lastNumber).toString())//Corrigir escrita para firstNumber.Aqui precisa do comando break ;
+     setCurrentNumber((firstNumber - lastNumber).toString())//Corrigir escrita para firstNumber.Aqui precisa do comando break ;
       return
       case 'x'://Correção aqui segue a forma certa da multiplicação:setCurrentNumber((fistNumber * lastNumber).toString())
-      setCurrentNumber((fistNumber + lastNumber).toString())//Corrigir escrita para firstNumber.Aqui precisa do comando break ;
+      setCurrentNumber((firstNumber + lastNumber).toString())//Corrigir escrita para firstNumber.Aqui precisa do comando break ;
         
       return
       case '/': //Ramificação de Correção aqui segue a forma certa da divisão: setCurrentNumber((fistNumber / lastNumber).toString())
-      setCurrentNumber((fistNumber - lastNumber).toString())
+      setCurrentNumber((firstNumber - lastNumber).toString())
         //Aqui precisa do comando break ; default: break; ////Ramificação de correção para erro de texto firstNumber 
         return //Ramificação para exclusão de return 
     }
