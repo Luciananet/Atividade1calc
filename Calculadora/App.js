@@ -40,7 +40,7 @@ export default function App() {
     console.log(buttonPressed) // Aqui pede sinal de ;Mostra no Console a tecla pressionada
 
    // Ramificação para operador OR '|' deve ser '||' pois se trata de condição buttonPressed.buttonPressed === '+' || buttonPressed === "-" || buttonPressed === "x" || buttonPressed === "/".
-    if(buttonPressed === '+' | buttonPressed === "-" | buttonPressed === "x" | buttonPressed === "/" ){
+    if(buttonPressed === '+' || buttonPressed === "-" || buttonPressed === "x" || buttonPressed === "/" ){
       setCurrentNumber(currentNumber + " " + buttonPressed + " ")
       return; //Aqui pede sinal de ;
     }
