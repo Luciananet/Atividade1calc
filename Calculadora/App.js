@@ -20,21 +20,26 @@ export default function App() {
     // Faz ação referente tecla pressionada
     switch(operator){
       case '+':
-        setCurrentNumber((firstNumber + lastNumber).toString())//Corrigir escrita para firstNumber .Aqui precisa do comando break 
-        return
-      case '-': 
-     setCurrentNumber((firstNumber - lastNumber).toString())//Corrigir escrita para firstNumber.Aqui precisa do comando break ;
-      return
+        setCurrentNumber((firstNumber + lastNumber).toString());
+        break;//Corrigir escrita para firstNumber .Aqui precisa do comando break 
+       case '-': 
+     setCurrentNumber((firstNumber - lastNumber).toString());
+     break;//Corrigir escrita para firstNumber.Aqui precisa do comando break ;
+      
       case 'x'://Correção aqui segue a forma certa da multiplicação:setCurrentNumber((fistNumber * lastNumber).toString())
-      setCurrentNumber((firstNumber * lastNumber).toString())//Corrigir escrita para firstNumber.Aqui precisa do comando break ;
-        
-      return
-      case '/': //Ramificação de Correção aqui segue a forma certa da divisão: setCurrentNumber((fistNumber / lastNumber).toString())
-      setCurrentNumber((firstNumber / lastNumber).toString())
-        //Aqui precisa do comando break ; default: break; ////Ramificação de correção para erro de texto firstNumber 
-        return //Ramificação para exclusão de return 
+      setCurrentNumber((firstNumber * lastNumber).toString());
+      break;//Corrigir escrita para firstNumber.Aqui precisa do comando break ;
+      case '/': 
+      setCurrentNumber((firstNumber / lastNumber).toString());
+      break;
     }
   }
+      return
+       //Ramificação de Correção aqui segue a forma certa da divisão: setCurrentNumber((fistNumber / lastNumber).toString())
+     
+        //Aqui precisa do comando break ; default: break; ////Ramificação de correção para erro de texto firstNumber 
+        return //Ramificação para exclusão de return 
+  
 
   function handleInput(buttonPressed){
     console.log(buttonPressed) // Aqui pede sinal de ;Mostra no Console a tecla pressionada
