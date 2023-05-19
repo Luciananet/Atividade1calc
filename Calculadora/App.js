@@ -96,7 +96,7 @@ export default function App() {
         // default:
         //Ramificação de inclusão :   setCurrentNumber(currentNumber + buttonPressed)
         //Incluir break;
-        return //Ramificação de exclusão de return desnecessário no código
+        //Ramificação de exclusão de return desnecessário no código
     }
 
    
