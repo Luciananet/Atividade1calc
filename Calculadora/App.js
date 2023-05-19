@@ -104,7 +104,7 @@ export default function App() {
             {/* Area onde o resultado é exibido */}
         <View style={styles.results}>
         <Text style={styles.historyText}>{lastNumber}</Text>
-        <Text style={styles.resultText}>{currentNumber}</Text>{/** aqui vai entrar essa </View> */}
+        <Text style={styles.resultText}>{currentNumber}</Text></View>{/** aqui vai entrar essa </View> */}
         
         {/**Ramificação para inclusão de </View> que deve ser no final do arquivo ./}
               
