@@ -26,11 +26,11 @@ export default function App() {
      setCurrentNumber((firstNumber - lastNumber).toString())//Corrigir escrita para firstNumber.Aqui precisa do comando break ;
       return
       case 'x'://Correção aqui segue a forma certa da multiplicação:setCurrentNumber((fistNumber * lastNumber).toString())
-      setCurrentNumber((firstNumber + lastNumber).toString())//Corrigir escrita para firstNumber.Aqui precisa do comando break ;
+      setCurrentNumber((firstNumber * lastNumber).toString())//Corrigir escrita para firstNumber.Aqui precisa do comando break ;
         
       return
       case '/': //Ramificação de Correção aqui segue a forma certa da divisão: setCurrentNumber((fistNumber / lastNumber).toString())
-      setCurrentNumber((firstNumber - lastNumber).toString())
+      setCurrentNumber((firstNumber / lastNumber).toString())
         //Aqui precisa do comando break ; default: break; ////Ramificação de correção para erro de texto firstNumber 
         return //Ramificação para exclusão de return 
     }
