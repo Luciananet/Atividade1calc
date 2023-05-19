@@ -46,14 +46,15 @@ export default function App() {
     }
     switch(buttonPressed){
       case 'DEL':
-        setCurrentNumber(currentNumber.substring(0, (currentNumber.length - 2)))//Aqui incluir ;break;
+        setCurrentNumber(currentNumber.substring(0, (currentNumber.length - 2)));
+        break;//Aqui incluir ;break;
         return
       case 'LIMPAR': // Limpa todo o conteúdo
         setLastNumber("") 
         setCurrentNumber("") //Aqui inclusão de ;Incluir break;
         return
       case '=':
-        setLastNumber(currentNumber + " = ") //Aqui incluir sinal;
+        setLastNumber(currentNumber + " = "); //Aqui incluir sinal;
         calculator()//Aqui incluir sinal ;
 
         //Ramificação para posicionamento de return
