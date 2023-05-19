@@ -7,15 +7,15 @@ export default function App() {
   const buttons = ['LIMPAR', 'DEL', '%', '/', 7, 8, 9, "x", 6, 5, 4, '-', 3, 2, 1, '+', 0, '.', '+/-', '=']
 
   //Ramificação para incluir sinal ;
-  const [currentNumber, setCurrentNumber] = useState("")
-  const [lastNumber, setLastNumber] = useState("")//aqui deve conter ;
+  const [currentNumber, setCurrentNumber] = useState("");
+  const [lastNumber, setLastNumber] = useState("");//aqui deve conter ;
 
 
   function calculator(){
     const splitNumbers = currentNumber.split(' ')
-    const fistNumber = parseFloat(splitNumbers[0]) //Ramificação de correção ortográfica de Aqui fistNumber para firstNumber .Aqui deve conter ;
-    const lastNumber = parseFloat(splitNumbers[2]) //Ramificação para forma certa mudar para : const secondNumber = parseFloat(splitNumbers[2]); Aqui deve conter ;
-    const operator = splitNumbers[1]// Aqui deve conter ;
+    const fistNumber = parseFloat(splitNumbers[0]); //Ramificação de correção ortográfica de Aqui fistNumber para firstNumber .Aqui deve conter ;
+    const lastNumber = parseFloat(splitNumbers[2]);//Ramificação para forma certa mudar para : const secondNumber = parseFloat(splitNumbers[2]); Aqui deve conter ;
+    const operator = splitNumbers[1];// Aqui deve conter ;
 
     // Faz ação referente tecla pressionada
     switch(operator){
@@ -42,7 +42,7 @@ export default function App() {
    // Ramificação para operador OR '|' deve ser '||' pois se trata de condição buttonPressed.buttonPressed === '+' || buttonPressed === "-" || buttonPressed === "x" || buttonPressed === "/".
     if(buttonPressed === '+' | buttonPressed === "-" | buttonPressed === "x" | buttonPressed === "/" ){
       setCurrentNumber(currentNumber + " " + buttonPressed + " ")
-      return //Aqui pede sinal de ;
+      return; //Aqui pede sinal de ;
     }
     switch(buttonPressed){
       case 'DEL':
