@@ -106,7 +106,7 @@ export default function App() {
         <Text style={styles.historyText}>{lastNumber}</Text>
         <Text style={styles.resultText}>{currentNumber}</Text></View>{/** aqui vai entrar essa </View> */}
         
-        {/**Ramificação para inclusão de </View> que deve ser no final do arquivo ./}
+      
               
             <View>
       
