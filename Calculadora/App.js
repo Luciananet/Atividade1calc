@@ -34,21 +34,24 @@ export default function App() {
       break;
     }
   }
+  function handleInput(buttonPressed){
+    console.log(buttonPressed);
+    if(buttonPressed === '+' || buttonPressed === "-" || buttonPressed === "x" || buttonPressed === "/" ){
+      setCurrentNumber(currentNumber + " " + buttonPressed + " ")
+      return; //Aqui pede sinal de ;
+    }
+   //Ramificação de Correção aqui segue a forma certa da divisão: setCurrentNumber((fistNumber / lastNumber).toString())
       return
-       //Ramificação de Correção aqui segue a forma certa da divisão: setCurrentNumber((fistNumber / lastNumber).toString())
+      
      
         //Aqui precisa do comando break ; default: break; ////Ramificação de correção para erro de texto firstNumber 
         return //Ramificação para exclusão de return 
   
 
-  function handleInput(buttonPressed){
-    console.log(buttonPressed) // Aqui pede sinal de ;Mostra no Console a tecla pressionada
+   // Aqui pede sinal de ;Mostra no Console a tecla pressionada
 
    // Ramificação para operador OR '|' deve ser '||' pois se trata de condição buttonPressed.buttonPressed === '+' || buttonPressed === "-" || buttonPressed === "x" || buttonPressed === "/".
-    if(buttonPressed === '+' || buttonPressed === "-" || buttonPressed === "x" || buttonPressed === "/" ){
-      setCurrentNumber(currentNumber + " " + buttonPressed + " ")
-      return; //Aqui pede sinal de ;
-    }
+    
     switch(buttonPressed){
       case 'DEL':
         setCurrentNumber(currentNumber.substring(0, (currentNumber.length - 2)));
