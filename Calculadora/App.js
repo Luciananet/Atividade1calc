@@ -97,44 +97,46 @@ export default function App() {
         //Ramificação de inclusão :   setCurrentNumber(currentNumber + buttonPressed)
         //Incluir break;
         //Ramificação de exclusão de return desnecessário no código
-    }
+
+        return (
+          <View style={styles.container}>
+      
+            {/* Area onde o resultado é exibido */}
+        <View style={styles.results}>
+        <Text style={styles.historyText}>{lastNumber}</Text>
+        <Text style={styles.resultText}>{currentNumber}</Text>{/** aqui vai entrar essa </View> */}
+        
+        {/**Ramificação para inclusão de </View> que deve ser no final do arquivo ./}
+              
+            <View>
+      
+            * Area onde os botões são exibidos*/}
+            <View style={styles.buttons}>
+      
+              {buttons.map((button) => 
+                button === '=' ?(// Ramificação para incluir sinal de ( Aqui array do map  // Mapeamento do botão =
+              <TouchableOpacity onPress={() => handleInput(button)} key={button} style={[styles.button, {backgroundColor: '#3dd0e3'}]}>
+                <Text style={[styles.textButton, {color: "white", fontSize: 30}]}>{button}</Text>
+              </TouchableOpacity>
+               ) :(  // Ramificação para incluir sinal de ( Aquiarray do map // Mapeamento dos outros botões
+                <TouchableOpacity onPress={() => handleInput(button)} key={button} style={styles.button}>
+                  <Text style={[styles.textButton, {color: typeof(button) === 'number' ? 'black': '#0093a6'}]}>{button}</Text>
+                </TouchableOpacity>
+               )
+              )}
+            </View>
+          </View>
+          </View>
+          
+        );
+      }
+    
 
    
  
 
 
-  return (
-    <View style={styles.container}>
-
-      {/* Area onde o resultado é exibido */}
-  <View style={styles.results}>
-  <Text style={styles.historyText}>{lastNumber}</Text>
-  <Text style={styles.resultText}>{currentNumber}</Text>{/** aqui vai entrar essa </View> */}
   
-  {/**Ramificação para inclusão de </View> que deve ser no final do arquivo ./}
-        
-      <View>
-
-      * Area onde os botões são exibidos*/}
-      <View style={styles.buttons}>
-
-        {buttons.map((button) => 
-          button === '=' ?(// Ramificação para incluir sinal de ( Aqui array do map  // Mapeamento do botão =
-        <TouchableOpacity onPress={() => handleInput(button)} key={button} style={[styles.button, {backgroundColor: '#3dd0e3'}]}>
-          <Text style={[styles.textButton, {color: "white", fontSize: 30}]}>{button}</Text>
-        </TouchableOpacity>
-         ) :(  // Ramificação para incluir sinal de ( Aquiarray do map // Mapeamento dos outros botões
-          <TouchableOpacity onPress={() => handleInput(button)} key={button} style={styles.button}>
-            <Text style={[styles.textButton, {color: typeof(button) === 'number' ? 'black': '#0093a6'}]}>{button}</Text>
-          </TouchableOpacity>
-         )
-        )}
-      </View>
-    </View>
-    </View>
-    
-  );
-}
 
 // Estilização
 const styles = StyleSheet.create({
