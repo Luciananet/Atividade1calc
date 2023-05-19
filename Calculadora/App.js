@@ -99,7 +99,7 @@ export default function App() {
         return //Ramificação de exclusão de return desnecessário no código
     }
 
-    setCurrentNumber(currentNumber + buttonPressed)//Ramificação de exclusão e posicionamento de elementos
+   
  
 
 
