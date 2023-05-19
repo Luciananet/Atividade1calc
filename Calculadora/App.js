@@ -62,7 +62,7 @@ export default function App() {
 
         //case '+/setCurrentNumber(currentNumber + buttonPressed);break; }
       //}
-        return //Ramificação de exclusão return
+      //Ramificação de exclusão return
       case '+/-':
         //incluir break;
         // default:
