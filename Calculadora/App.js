@@ -40,12 +40,23 @@ export default function App() {
       setCurrentNumber(currentNumber + " " + buttonPressed + " ")
       return; //Aqui pede sinal de ;
     }
+    switch(buttonPressed){
+      case 'DEL':
+        setCurrentNumber(currentNumber.substring(0, (currentNumber.length - 2)));
+        break;//Aqui incluir ;break;
+        return
+      case 'LIMPAR': // Limpa todo o conteúdo
+        setLastNumber("") 
+        setCurrentNumber("");
+        break;
+      }
+    
    //Ramificação de Correção aqui segue a forma certa da divisão: setCurrentNumber((fistNumber / lastNumber).toString())
-      return
+      
       
      
         //Aqui precisa do comando break ; default: break; ////Ramificação de correção para erro de texto firstNumber 
-        return //Ramificação para exclusão de return 
+         //Ramificação para exclusão de return 
   
 
    // Aqui pede sinal de ;Mostra no Console a tecla pressionada
@@ -59,11 +70,20 @@ export default function App() {
         return
       case 'LIMPAR': // Limpa todo o conteúdo
         setLastNumber("") 
-        setCurrentNumber("") //Aqui inclusão de ;Incluir break;
+        setCurrentNumber("");
+        break; //Aqui inclusão de ;Incluir break;
         return
       case '=':
         setLastNumber(currentNumber + " = "); //Aqui incluir sinal;
-        calculator()//Aqui incluir sinal ;
+        calculator();
+        break;
+        case '+/-':
+        break;
+        default:
+          setCurrentNumber(currentNumber + buttonPressed);
+          break;
+      }
+    }//Adicione a lógica para inverter o sinal do número atual//Aqui incluir sinal ;
 
         //Ramificação para posicionamento de return
         //Vai ficar assim antes de return : case '+/-': //Adicionar logica para  inverter o sinal do numero atual break;    setCurrentNumber(currentNumber + buttonPressed);break;
@@ -71,7 +91,7 @@ export default function App() {
         //case '+/setCurrentNumber(currentNumber + buttonPressed);break; }
       //}
       //Ramificação de exclusão return
-      case '+/-':
+     
         //incluir break;
         // default:
         //Ramificação de inclusão :   setCurrentNumber(currentNumber + buttonPressed)
@@ -80,7 +100,7 @@ export default function App() {
     }
 
     setCurrentNumber(currentNumber + buttonPressed)//Ramificação de exclusão e posicionamento de elementos
-  }
+ 
 
 
   return (
